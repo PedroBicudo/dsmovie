@@ -1,0 +1,18 @@
+.dsmovie-contact-github > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .625em;
+    padding: .5em;
+}
+
+.dsmovie-contact-github__icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.dsmovie-contact-github__name {
+    margin: 0;
+    font-size: 12px;
+}

@@ -1,0 +1,13 @@
+.dsmovie-nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFF;
+    padding: 0.875em 0em;
+}
+
+.dsmovie-nav-content h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+}
