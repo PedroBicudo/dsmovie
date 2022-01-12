@@ -1,9 +1,8 @@
 package com.devsuperior.dsmovie.configurations;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -21,12 +20,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
      * Permite que o Front End acesse a API do Spring
      */
 
-    @Autowired
-    private Environment env;
+    @Value("${spring.profiles.active}")
+    private String profileActive;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
+        if (profileActive.equals("test")) {
             http.headers().frameOptions().disable();
         }
 
