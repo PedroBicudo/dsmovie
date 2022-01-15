@@ -32,15 +32,17 @@ const Listing: React.FC = () => {
     
     }, [pageNumber]);
 
+    const handlePageChange = (newPageNumber: number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return (
         <>
-            <p>{pageNumber}</p>
-            <Pagination />
+            <Pagination moviesPage={moviesPage}  onChangePagination={handlePageChange}/>
 
             <div className="container-fluid mt-3">
                 <div className="row justify-content-center gap-4">
                     {moviesPage.content.map(movie => 
-                    
                         <div key={movie.id} className="col-sm-6 col-md-4 col-lg-3">
                             <MovieCard movie={movie}/>
                         </div>
