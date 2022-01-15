@@ -23,9 +23,10 @@ const Listing: React.FC = () => {
     });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=title`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)
         .then(reponse => {
             const data = reponse.data as MoviePage;
+            
             setMoviesPage(data);
         })
     
@@ -39,6 +40,7 @@ const Listing: React.FC = () => {
             <div className="container-fluid mt-3">
                 <div className="row justify-content-center gap-4">
                     {moviesPage.content.map(movie => 
+                    
                         <div key={movie.id} className="col-sm-6 col-md-4 col-lg-3">
                             <MovieCard movie={movie}/>
                         </div>
