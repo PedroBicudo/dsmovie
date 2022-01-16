@@ -6,13 +6,13 @@
 
 .dsmovie-score__value {
     margin: 0;
-    color: #FFBB3A;
+    color: var(--color-gold);
     font-size: var(--fs-lg);
     font-weight: 700;
 }
 
 .dsmovie-score__count {
     font-size: var(--fs-sm);
-    color: #989898;
+    color: var(--color-gray-500);
     margin: 4px 0 10px 0;
 }

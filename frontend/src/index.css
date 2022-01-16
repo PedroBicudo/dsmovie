@@ -26,6 +26,12 @@ a, a:hover {
   /* Colors */
   --color-primary: #4D41C0;
   --color-bkg: #E8E8E8;
+  --color-white: #fff;
+  --color-gray-800: #4A4A4A;
+  --color-gray-500: #989898;
+  --color-gray-400: #c2c2c2;
+  --color-gray-300: #aaa;
+  --color-gold: #FFBB3A;
 }
 
 /* Defaults */
