@@ -11,14 +11,14 @@ type Props = {
 const MovieScore: React.FC<Props> = ({ score, totalReviews }) => {
     
     return (
-        <div className="dsmovie-score-container">
-            <p className="dsmovie-score-value">
+        <div className="dsmovie-score">
+            <p className="dsmovie-score__value">
                 {
                     score > 0? score.toFixed(1): "-"
                 }
             </p>
             <MovieStars score={score}/>
-            <p className="dsmovie-score-count">{totalReviews} avaliações</p>
+            <p className="dsmovie-score__count">{totalReviews} avaliações</p>
         </div>
     );
 };
