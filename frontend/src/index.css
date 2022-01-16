@@ -24,19 +24,19 @@ a, a:hover {
 
 
   /* Colors */
-  --color-primary: #4D41C0;
-  --color-bkg: #E8E8E8;
+  --color-black-0: #161616;
+  --color-black-10: #1C1C1C;
+  --color-black-20: #434343;
+  --color-black-30: #939393;
+  --color-black-40: #989898;
   --color-white: #fff;
-  --color-gray-800: #4A4A4A;
-  --color-gray-500: #989898;
-  --color-gray-400: #c2c2c2;
-  --color-gray-300: #aaa;
+  --color-black: #000;
   --color-gold: #FFBB3A;
 }
 
 /* Defaults */
 html, body {
-  background-color: var(--color-bkg);
+  background-color: var(--color-black-10);
 }
 
 *, *::after, *::before {
