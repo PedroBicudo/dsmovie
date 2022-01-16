@@ -1,4 +1,4 @@
-.dsmovie-contact-github > div{
+.dsmovie-contact-github__content {
     display: flex;
     flex-direction: row;
     align-items: center;
