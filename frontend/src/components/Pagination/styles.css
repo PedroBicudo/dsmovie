@@ -1,23 +1,18 @@
-.dsmovie-pagination-container {
+.dsmovie-pagination {
     padding: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.dsmovie-pagination-box {
+.dsmovie-pagination__box {
     width: 180px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.dsmovie-pagination-box form {
-    width: 100%;
-    display: flex;
-}
-
-.dsmovie-pagination-button {
+.dsmovie-pagination__btn {
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -29,20 +24,20 @@
     cursor: pointer;
 }
 
-.dsmovie-pagination-button svg {
+.dsmovie-pagination__btn svg {
     filter: brightness(0) saturate(100%) invert(26%) sepia(19%) saturate(7395%) hue-rotate(234deg) brightness(89%) contrast(92%);
 }
 
-.dsmovie-pagination-button:disabled {
+.dsmovie-pagination__btn:disabled {
     border: 1px solid #c2c2c2;
     cursor: unset;
 }
 
-.dsmovie-pagination-button:disabled svg {
+.dsmovie-pagination__btn:disabled svg {
     filter: none;
 }
 
-.dsmovie-pagination-container p {
+.dsmovie-pagination__pages-text {
     margin: 0;
     font-size: 12px;
     color: var(--color-primary);
