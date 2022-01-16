@@ -16,6 +16,14 @@ a, a:hover {
 
 /* Variables */
 :root {
+  /* Font size */
+  --fs-sm: 0.75rem; /* 12px */
+  --fs-base: 0.875rem; /* 14px */
+  --fs-lg: 1rem; /* 16px */
+  --fs-xlg: 1.5rem; /* 24px */
+
+
+  /* Colors */
   --color-primary: #4D41C0;
   --color-bkg: #E8E8E8;
 }

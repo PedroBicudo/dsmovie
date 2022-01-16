@@ -27,7 +27,7 @@
 .movie-form-page__title {
     color: #4A4A4A;
     text-align: center;
-    font-size: 14px;
+    font-size: var(--fs-lg);
     font-weight: 700;
     margin-bottom: 10px;
     min-height: 40px;
@@ -42,7 +42,7 @@
 }
 
 .dsmovie-form__group label {
-    font-size: 12px;
+    font-size: var(--fs-sm);
     color: #aaa;
 }
 
@@ -53,7 +53,7 @@
 
 .dsmovie-form__btn {
     background-color: var(--color-primary);
-    font-size: 14px;
+    font-size: var(--fs-base);
     font-weight: 700;
     height: 40px;
     width: 180px;
