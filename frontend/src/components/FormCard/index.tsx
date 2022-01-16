@@ -49,16 +49,16 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
     }
 
     return (
-        <div className="dsmovie-form-container">
+        <div className="dsmovie-card movie-form-page">
             <img
-                className="dsmovie-movie-card-image"
+                className="movie-form-page__image"
                 src={movie?.image}
                 alt={movie?.title}
             />
-            <div className="dsmovie-card-bottom-container">
-                <h3>{movie?.title}</h3>
+            <div className="movie-form-page__content">
+                <h3 className="movie-form-page__title">{movie?.title}</h3>
                 <form className="dsmovie-form" onSubmit={handleSubmit}>
-                    <div className="form-group dsmovie-form-group">
+                    <div className="form-group dsmovie-form__group">
                         <label htmlFor="email">Informe seu email</label>
                         <input
                             type="email"
@@ -66,7 +66,7 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
                             id="email"
                         />
                     </div>
-                    <div className="form-group dsmovie-form-group">
+                    <div className="form-group dsmovie-form__group">
                         <label htmlFor="score">Informe sua avaliação</label>
                         <select className="form-control" id="score">
                             <option>1</option>
@@ -76,10 +76,10 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
                             <option>5</option>
                         </select>
                     </div>
-                    <div className="dsmovie-form-btn-container">
+                    <div className="dsmovie-form__btn-container">
                         <button
                             type="submit"
-                            className="btn btn-primary dsmovie-btn"
+                            className="btn btn-primary dsmovie-form__btn"
                         >
                             Salvar
                         </button>
@@ -87,7 +87,7 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
                 </form>
 
                 <Link to="/">
-                    <button className="btn btn-primary dsmovie-btn mt-3">
+                    <button className="btn btn-primary dsmovie-form__btn mt-3">
                         Cancelar
                     </button>
                 </Link>
