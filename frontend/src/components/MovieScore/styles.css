@@ -7,12 +7,12 @@
 .dsmovie-score__value {
     margin: 0;
     color: #FFBB3A;
-    font-size: 16px;
+    font-size: var(--fs-lg);
     font-weight: 700;
 }
 
 .dsmovie-score__count {
-    font-size: 12px;
+    font-size: var(--fs-sm);
     color: #989898;
     margin: 4px 0 10px 0;
 }

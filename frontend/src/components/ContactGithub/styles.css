@@ -14,5 +14,5 @@
 
 .dsmovie-contact-github__name {
     margin: 0;
-    font-size: 12px;
+    font-size: var(--fs-sm);
 }

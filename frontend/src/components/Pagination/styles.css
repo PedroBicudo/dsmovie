@@ -39,7 +39,7 @@
 
 .dsmovie-pagination__pages-text {
     margin: 0;
-    font-size: 12px;
+    font-size: var(--fs-sm);
     color: var(--color-primary);
 }
 
