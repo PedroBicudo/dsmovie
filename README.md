@@ -9,7 +9,7 @@
 <div align="center">
   <h2>Desktop</h2>
   <img width="500" src="https://user-images.githubusercontent.com/43938917/149672279-3ab9fa5e-a197-4390-92b5-3bb767d8e270.png" alt="Movies list page on desktop"/>
-  <img width="500" src="https://user-images.githubusercontent.com/43938917/149672303-46da43ae-4a0c-45fd-8592-6471019f5019.png" alt="Movie form page on desktop"/>
+  <img height="227.46" src="https://user-images.githubusercontent.com/43938917/149672303-46da43ae-4a0c-45fd-8592-6471019f5019.png" alt="Movie form page on desktop"/>
 </div>
 
 <div align="center">
