@@ -1,4 +1,4 @@
-.dsmovie-nav-content {
+.dsmovie-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -6,7 +6,7 @@
     padding: 0.875em 0em;
 }
 
-.dsmovie-nav-content h1 {
+.dsmovie-nav__title {
     margin: 0;
     font-weight: 700;
     font-size: 24px;
