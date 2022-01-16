@@ -62,13 +62,13 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
                         <label htmlFor="email">Informe seu email</label>
                         <input
                             type="email"
-                            className="form-control"
+                            className="form-control dsmovie-form__input"
                             id="email"
                         />
                     </div>
                     <div className="form-group dsmovie-form__group">
                         <label htmlFor="score">Informe sua avaliação</label>
-                        <select className="form-control" id="score">
+                        <select className="form-control dsmovie-form__input" id="score">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>

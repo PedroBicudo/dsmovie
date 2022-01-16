@@ -16,31 +16,23 @@
     width: 40px;
     height: 40px;
     border-radius: 4px;
-    background-color: var(--color-white);
+    background-color: var(--color-black-20);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--color-primary);
+    border: none;
     cursor: pointer;
 }
 
-.dsmovie-pagination__btn svg {
-    filter: brightness(0) saturate(100%) invert(26%) sepia(19%) saturate(7395%) hue-rotate(234deg) brightness(89%) contrast(92%);
-}
-
 .dsmovie-pagination__btn:disabled {
-    border: 1px solid var(--color-gray-400);
+    filter: opacity(.4);
     cursor: unset;
-}
-
-.dsmovie-pagination__btn:disabled svg {
-    filter: none;
 }
 
 .dsmovie-pagination__pages-text {
     margin: 0;
     font-size: var(--fs-sm);
-    color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .dsmovie-flip-horizontal {
