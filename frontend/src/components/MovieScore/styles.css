@@ -14,5 +14,5 @@
 .dsmovie-score__count {
     font-size: var(--fs-sm);
     color: var(--color-gray-500);
-    margin: 4px 0 10px 0;
+    margin: 0.25rem 0 0.625rem 0;
 }
