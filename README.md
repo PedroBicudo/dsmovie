@@ -8,13 +8,13 @@
 
 <div align="center">
   <h2>Desktop</h2>
-  <img width="500" src="https://user-images.githubusercontent.com/43938917/149672279-3ab9fa5e-a197-4390-92b5-3bb767d8e270.png" alt="Movies list page on desktop"/>
+  <img width="500" src="https://user-images.githubusercontent.com/43938917/149815695-8cb3cf31-43f3-4e49-b655-d90e0e202657.png" alt="Movies list page on desktop"/>
   <img height="227.46" src="https://user-images.githubusercontent.com/43938917/149672303-46da43ae-4a0c-45fd-8592-6471019f5019.png" alt="Movie form page on desktop"/>
 </div>
 
 <div align="center">
   <h2>Mobile</h2>
-  <img height="491" src="https://user-images.githubusercontent.com/43938917/149672348-2231c3af-392b-40f7-b13e-d13533dc54ab.png" alt="Movies list page on mobile" />
+  <img height="491" src="https://user-images.githubusercontent.com/43938917/149815999-6624acf3-21ae-4d48-bd52-cf2204fd623a.png" alt="Movies list page on mobile" />
   <img height="491" src="https://user-images.githubusercontent.com/43938917/149672376-852b6311-4757-47f7-9dab-16fbf8ba0769.png" alt="Movie form page on mobile" />
 </div>
 <br><br>
