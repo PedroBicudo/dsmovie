@@ -3,7 +3,7 @@
     flex-direction: row;
     align-items: center;
     gap: .625em;
-    padding: .5em;
+    padding: .5em .8em;
 }
 
 .dsmovie-contact-github__icon {
