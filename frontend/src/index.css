@@ -28,15 +28,78 @@ a, a:hover {
   --color-black-10: #1C1C1C;
   --color-black-20: #434343;
   --color-black-30: #939393;
-  --color-black-40: #989898;
   --color-white: #fff;
   --color-black: #000;
   --color-gold: #FFBB3A;
+
+
+  /* Dark theme */
+  --color-dark-theme-background-0: #161616;
+  --color-dark-theme-background-10: #1C1C1C;
+  --color-dark-theme-background-20: #434343;
+  --color-dark-theme-background-30: #939393;
+  
+  --color-dark-theme-text-color-0: var(--color-white);
+  --color-dark-theme-text-color-1: #1C1C1C;
+  --color-dark-theme-text-color-2: var(--color-white);
+
+  --color-dark-theme-border-color-0: #161616;
+  --color-dark-theme-border-color-1: var(--color-white);
+
+  /* Light theme */
+  --color-light-theme-background-0: #5386E4;
+  --color-light-theme-background-10:#E6EFFF;
+  --color-light-theme-background-20:#5386E4;
+  --color-light-theme-background-30:#0042BB;
+  
+  --color-light-theme-text-color-0: var(--color-white);
+  --color-light-theme-text-color-1: var(--color-white);
+  --color-light-theme-text-color-2: var(--color-black);
+
+
+  --color-light-theme-border-color-0: #5386E4;
+  --color-light-theme-border-color-1: var(--color-black);
+
+
+  /* Default */
+  --color-background-0: var(--color-dark-theme-background-0);
+  --color-background-10: var(--color-dark-theme-background-10);
+  --color-background-20: var(--color-dark-theme-background-20);
+  --color-background-30: var(--color-dark-theme-background-30);
+
+  --color-text-color-0: var(--color-dark-theme-text-color-0);
+  --color-text-color-1: var(--color-dark-theme-text-color-1);
+  --color-text-color-2: var(--color-dark-theme-text-color-2);
+
+  --color-border-color-0: var(--color-dark-theme-border-color-0);
+  --color-border-color-1: var(--color-dark-theme-border-color-1);
+
+}
+
+.light-theme {
+  --color-background-0: var(--color-light-theme-background-0);
+  --color-background-10: var(--color-light-theme-background-10);
+  --color-background-20: var(--color-light-theme-background-20);
+  --color-background-30: var(--color-light-theme-background-30);
+
+  --color-text-color-0: var(--color-light-theme-text-color-0);
+  --color-text-color-1: var(--color-light-theme-text-color-1);
+  --color-text-color-2: var(--color-light-theme-text-color-2);
+
+  --color-border-color-0: var(--color-light-theme-border-color-0);
+  --color-border-color-1: var(--color-light-theme-border-color-1);
+
+}
+
+/* Utils */
+.sr-only {
+  position: absolute;
+  left: -9999px;
 }
 
 /* Defaults */
-html, body {
-  background-color: var(--color-black-10);
+body {
+  background-color: var(--color-background-10);
 }
 
 *, *::after, *::before {
