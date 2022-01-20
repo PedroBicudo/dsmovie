@@ -55,7 +55,8 @@
 
 .dsmovie-listing-item__btn {
     border: none;
-    background-color: var(--color-black-0);
+    background-color: var(--color-background-0);
+    color: var(--color-text-color-0);
     font-size: var(--fs-base);
     font-weight: 700;
     height: 40px;
@@ -66,8 +67,8 @@
 }
 
 .dsmovie-listing-item__btn:hover {
-    background-color: var(--color-black-30);
-    color: var(--color-black-10);
+    background-color: var(--color-background-30);
+    color: var(--color-text-color-1);
 }
 
 @media screen and (min-width: 800px) {
