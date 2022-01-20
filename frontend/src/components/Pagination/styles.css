@@ -16,16 +16,12 @@
     width: 40px;
     height: 40px;
     border-radius: 4px;
-    background-color: var(--color-background-20);
+    background-color: var(--color-black-20);
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     cursor: pointer;
-}
-
-.dsmovie-pagination__btn * {
-    fill: var(--color-white);
 }
 
 .dsmovie-pagination__btn:disabled {
@@ -36,7 +32,7 @@
 .dsmovie-pagination__pages-text {
     margin: 0;
     font-size: var(--fs-sm);
-    color: var(--color-text-color-2);
+    color: var(--color-white);
 }
 
 .dsmovie-flip-horizontal {
