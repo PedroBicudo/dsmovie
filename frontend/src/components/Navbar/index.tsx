@@ -1,3 +1,4 @@
+import ThemeToggler from "components/ThemeToggler/ThemeToggler";
 import ContactGithub from "../ContactGithub";
 import "./styles.css";
 
@@ -6,7 +7,10 @@ export default function Navbar() {
       <nav className="container">
         <div className="dsmovie-nav">
           <h1 className="dsmovie-nav__title">DSMovie</h1>
-          <ContactGithub />
+          <div className="d-flex align-items-center gap-3">
+            <ThemeToggler />
+            <ContactGithub />
+          </div>
         </div>
     </nav>
 
