@@ -4,6 +4,7 @@ import Pagination from "components/Pagination";
 import React, { useEffect, useState } from "react";
 import { MoviePage } from "types/movie";
 import { BASE_URL } from "utils/requests";
+import { CardsGrid } from "./styles";
 
 
 const Listing: React.FC = () => {
@@ -40,15 +41,13 @@ const Listing: React.FC = () => {
         <>
             <Pagination moviesPage={moviesPage}  onChangePagination={handlePageChange}/>
 
-            <div className="container-fluid mt-3">
-                <div className="row justify-content-center gap-4">
+            <CardsGrid>
                     {moviesPage.content.map(movie => 
-                        <div key={movie.id} className="col-sm-6 col-md-4 col-lg-3">
+                        <div key={movie.id}>
                             <MovieCard movie={movie}/>
                         </div>
                     )}
-                </div>
-            </div>
+            </CardsGrid>
         </>
     );
 }

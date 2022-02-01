@@ -1,12 +1,12 @@
 import Navbar from "components/Navbar";
 import React from "react";
-import "./styles.css";
+import { StyledHeader } from "./styles";
 
 const MainHeader: React.FC = () => {
     return (
-        <header className="main-header">
+        <StyledHeader>
             <Navbar />
-        </header>
+        </StyledHeader>
     );
 }
 

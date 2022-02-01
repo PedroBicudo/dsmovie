@@ -6,10 +6,12 @@ import {
 import Listing from 'pages/Listing';
 import Form from 'pages/Form';
 import MainHeader from "components/MainHeader";
+import { Grid } from "styles";
 
 function App() {
   return (
     <BrowserRouter>
+      <Grid>
       <MainHeader />
       <Routes>
         <Route path="/" element={<Listing />} />
@@ -17,6 +19,7 @@ function App() {
           <Route path=":movieId" element={<Form />} />
         </Route>
       </Routes>
+      </Grid>
     </BrowserRouter>
   );
 }

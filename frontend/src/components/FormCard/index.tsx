@@ -1,10 +1,11 @@
 import axios, { AxiosRequestConfig } from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Flex } from "styles/layouts/Flex";
 import { Movie } from "types/movie";
 import { BASE_URL } from "utils/requests";
 import { validateEmail } from "utils/validate";
-import "./styles.css";
+import { Card, CardButton, CardContent, CardImage, CardTitle, Form, FormGroup, FormGroupInput, FormGroupLabel, FormGroupSelect } from "./styles";
 
 type Props = {
     movieId: string
@@ -49,50 +50,49 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
     }
 
     return (
-        <div className="dsmovie-card movie-form-page">
-            <img
-                className="movie-form-page__image"
+        <Card>
+            <CardImage
                 src={movie?.image}
                 alt={movie?.title}
             />
-            <div className="movie-form-page__content">
-                <h3 className="movie-form-page__title">{movie?.title}</h3>
-                <form className="dsmovie-form" onSubmit={handleSubmit}>
-                    <div className="form-group dsmovie-form__group">
-                        <label htmlFor="email">Informe seu email</label>
-                        <input
+            <CardContent>
+                <CardTitle>{movie?.title}</CardTitle>
+                <Form onSubmit={handleSubmit}>
+                    <FormGroup>
+                        <FormGroupLabel htmlFor="email">Informe seu email</FormGroupLabel>
+                        <FormGroupInput
                             type="email"
                             className="form-control dsmovie-form__input"
                             id="email"
                         />
-                    </div>
-                    <div className="form-group dsmovie-form__group">
-                        <label htmlFor="score">Informe sua avaliação</label>
-                        <select className="form-control dsmovie-form__input" id="score">
+                    </FormGroup>
+                    <FormGroup>
+                        <FormGroupLabel htmlFor="score">Informe sua avaliação</FormGroupLabel>
+                        <FormGroupSelect className="form-control dsmovie-form__input" id="score">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
-                        </select>
-                    </div>
-                    <div className="dsmovie-form__btn-container">
-                        <button
+                        </FormGroupSelect>
+                    </FormGroup>
+                    <Flex gap={0} justify="center">
+                        <CardButton
                             type="submit"
-                            className="btn btn-primary dsmovie-form__btn"
                         >
                             Salvar
-                        </button>
-                    </div>
-                </form>
+                        </CardButton>
+                    </Flex>
+
+                </Form>
 
                 <Link to="/">
-                    <button className="btn btn-primary dsmovie-form__btn mt-3">
+                    <CardButton>
                         Cancelar
-                    </button>
+                    </CardButton>
                 </Link>
-            </div>
-        </div>
+            </CardContent>
+        </Card>
     );
 };
 

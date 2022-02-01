@@ -1,18 +1,18 @@
 import ThemeToggler from "components/ThemeToggler/ThemeToggler";
+import { Flex } from "styles/layouts/Flex";
 import ContactGithub from "../ContactGithub";
-import "./styles.css";
+import { Nav, NavTitle } from "./styles";
 
 export default function Navbar() {
     return (
-      <nav className="container">
-        <div className="dsmovie-nav">
-          <h1 className="dsmovie-nav__title">DSMovie</h1>
-          <div className="d-flex align-items-center gap-3">
+      <Nav>
+        <Flex justify="space-between" gap={0}>
+          <NavTitle>DSMovie</NavTitle>
+          <Flex justify="space-between" gap={.5}>
             <ThemeToggler />
             <ContactGithub />
-          </div>
-        </div>
-    </nav>
-
+          </Flex>
+        </Flex>
+      </Nav>
     );
 }
