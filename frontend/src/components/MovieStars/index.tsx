@@ -2,7 +2,8 @@ import React from "react";
 import {ReactComponent as StarFull} from "assets/img/full-star-icon.svg";
 import {ReactComponent as StarHalf} from "assets/img/half-star-icon.svg";
 import {ReactComponent as StarEmpty} from "assets/img/empty-star-icon.svg";
-import './styles.css';
+import { MovieStarsContainer, StarWrapper } from "./styles";
+import { Flex } from "styles/layouts/Flex";
 
 type MovieStarsProps = {
     score: number;
@@ -12,13 +13,15 @@ const MovieStars: React.FC<MovieStarsProps> = ({ score }) => {
     const fills = getFills(score);
 
     return (
-        <div className="dsmovie-stars">
-            <Star fill={fills[0]} />
-            <Star fill={fills[1]} />
-            <Star fill={fills[2]} />
-            <Star fill={fills[3]} />
-            <Star fill={fills[4]} />
-        </div>
+        <MovieStarsContainer>
+            <Flex gap={0} justify="space-between">
+                <Star fill={fills[0]} />
+                <Star fill={fills[1]} />
+                <Star fill={fills[2]} />
+                <Star fill={fills[3]} />
+                <Star fill={fills[4]} />
+            </Flex>
+        </MovieStarsContainer>
     );
 };
 
@@ -30,11 +33,23 @@ type StarProps = {
 const Star: React.FC<StarProps> = ({ fill }) => {
     switch (fill) {
         case 0:
-            return <StarEmpty />
+            return (
+                <StarWrapper> 
+                    <StarEmpty />
+                </StarWrapper>
+            );
         case 1:
-            return <StarFull />
+            return (
+                <StarWrapper>
+                    <StarFull />
+                </StarWrapper>
+            );
         default:
-            return <StarHalf />    
+            return (
+                <StarWrapper>
+                    <StarHalf />
+                </StarWrapper>
+            );
     }
 }
 
