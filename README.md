@@ -58,7 +58,7 @@ npm run start
 - Git & Github
 - Netlify
 - Typescript
-- Bootstrap
+- styled-components
 
 ### :wrench: Back End
 - Java
