@@ -1,6 +1,7 @@
 import MovieStars from "components/MovieStars";
 import React from "react";
-import "./styles.css";
+import { Flex } from "styles/layouts/Flex";
+import { MovieScoreCount, MovieScoreValue } from "./styles";
 
 type Props = {
     score: number;
@@ -11,15 +12,15 @@ type Props = {
 const MovieScore: React.FC<Props> = ({ score, totalReviews }) => {
     
     return (
-        <div className="dsmovie-score">
-            <p className="dsmovie-score__value">
+        <Flex direction="column" alignItems="center" gap={.25}>
+            <MovieScoreValue>
                 {
                     score > 0? score.toFixed(1): "-"
                 }
-            </p>
+            </MovieScoreValue>
             <MovieStars score={score}/>
-            <p className="dsmovie-score__count">{totalReviews} avaliações</p>
-        </div>
+            <MovieScoreCount>{totalReviews} avaliações</MovieScoreCount>
+        </Flex>
     );
 };
 
