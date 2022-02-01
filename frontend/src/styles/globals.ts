@@ -99,12 +99,6 @@ const GlobalStyles = createGlobalStyle`
 
     }
 
-    /* Utils */
-    .sr-only {
-      position: absolute;
-      left: -9999px;
-    }
-
     /* Defaults */
     body {
       background-color: var(--color-background-10);

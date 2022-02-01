@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./styles.css";
+import { ScreenReaderOnly } from "styles/acessibility/ScreenReaderOnly";
+import { StyledFieldset, StyledLabel, StyledRadioButton, ToggleAnimation } from "./styles";
 
 const ThemeToggler: React.FC = () => {
     const [isDarkChecked, setIsDarkChecked] = useState(true);
@@ -26,14 +27,16 @@ const ThemeToggler: React.FC = () => {
     }
 
     return (
-        <fieldset className="dsmovie-theme-toggler">
-            <legend className="sr-only">Theme toggler</legend>
-            <ToggleAnimation isDarkTheme={isDarkChecked} />
+        <StyledFieldset>
+            <ScreenReaderOnly>
+                <legend>Theme toggler</legend>
+            </ScreenReaderOnly>
+            <ToggleAnimation isDark={isDarkChecked} />
 
             <Toggler theme="dark" isChecked={isDarkChecked} onChangeEvent={onToggleTheme} />
             <Toggler theme="light" isChecked={!isDarkChecked} onChangeEvent={onToggleTheme} />
 
-        </fieldset>
+        </StyledFieldset>
     );
 }
 
@@ -59,13 +62,13 @@ interface TogglerLabelProps {
 
 const TogglerLabel: React.FC<TogglerLabelProps> = (props) => {
     return (
-        <label 
-            className="dsmovie-toggler__label"
-            htmlFor={`toggle-${props.theme}`}
-        >
-            <span className="sr-only">Toggle to {props.theme} theme</span>
-        </label>
-
+        <ScreenReaderOnly>
+            <StyledLabel
+                htmlFor={`toggle-${props.theme}`}
+            >
+                    Toggle to {props.theme} theme
+            </StyledLabel>
+        </ScreenReaderOnly>
     );
 }
 
@@ -77,31 +80,16 @@ interface TogglerInputProps {
 
 const TogglerInput: React.FC<TogglerInputProps> = (props) => {
     return (
-        <input 
-            type="radio" 
+        <StyledRadioButton
+            type="radio"
             name="toggler" 
             id={`toggle-${props.theme}`}
-            className="dsmovie-toggler__input"
             checked={props.isChecked}
             onChange={() => props.onChangeEvent()}
         />
     );
 }
 
-interface ToggleAnimationProps {
-    isDarkTheme: boolean
-}
-
-const ToggleAnimation: React.FC<ToggleAnimationProps> = (props) => {
-    if (props.isDarkTheme) {
-        return <div className="theme-toggler-animation go-right"></div>
-    
-    } else {
-        return <div className="theme-toggler-animation"></div>
-    
-    }
-
-}
 
 export default ThemeToggler;
 
