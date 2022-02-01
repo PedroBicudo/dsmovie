@@ -1,7 +1,8 @@
 import React from "react";
 import {ReactComponent as Arrow} from "assets/img/arrow-icon.svg";
-import './styles.css';
 import { MoviePage } from "types/movie";
+import { Flex } from "styles/layouts/Flex";
+import { ArrowWrapper, PaginationButton, PaginationContainer, PaginationText } from "./styles";
 
 
 type Props = {
@@ -13,25 +14,33 @@ type Props = {
 const Pagination: React.FC<Props> = ({ moviesPage, onChangePagination }) => {
 
     return (
-        <div className="dsmovie-pagination">
-            <div className="dsmovie-pagination__box">
-                <button 
-                    className="dsmovie-pagination__btn" 
+        <PaginationContainer>
+            <Flex gap={0} justify="space-between" alignItems="center">
+                <PaginationButton
                     disabled={moviesPage.first}
                     onClick={() => onChangePagination(moviesPage.number-1)}
                     >
-                    <Arrow />
-                </button>
-                <p className="dsmovie-pagination__pages-text">{`${moviesPage.number+1} de ${moviesPage.totalPages}`}</p>
-                <button 
-                    className="dsmovie-pagination__btn"
+                        <ArrowWrapper rotate={false}>
+                            <Flex gap={0} alignItems="center" justify="center">
+                                <Arrow />
+                            </Flex>
+                        </ArrowWrapper>
+                </PaginationButton>
+                
+                <PaginationText>{`${moviesPage.number+1} de ${moviesPage.totalPages}`}</PaginationText>
+                
+                <PaginationButton
                     disabled={moviesPage.last} 
                     onClick={() => onChangePagination(moviesPage.number+1)}
                     >
-                    <Arrow className="dsmovie-flip-horizontal" />
-                </button>
-            </div>
-        </div>
+                        <ArrowWrapper rotate={true}>
+                            <Flex gap={0} alignItems="center" justify="center">
+                                <Arrow />
+                            </Flex>
+                        </ArrowWrapper>                        
+                </PaginationButton>
+            </Flex>
+        </PaginationContainer>
     );
 }
 

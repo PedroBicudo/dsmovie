@@ -8,7 +8,7 @@ interface FlexProps {
 }
 
 type FlexDirection = "row" | "column" | "row-reverse" | "column-reverse";
-type FlexJustify = "flex-start" | "flex-end" | "space-between" | "space-around";
+type FlexJustify = "flex-start" | "flex-end" | "space-between" | "space-around" | "center";
 type FlexAlignItems = "flex-start" | "flex-end" | "center";
 
 const Flex = styled.div<FlexProps>`
