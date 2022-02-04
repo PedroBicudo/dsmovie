@@ -1,8 +1,8 @@
-package com.devsuperior.dsmovie.controller;
+package com.devsuperior.dsmovie.rest.controller;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
-import com.devsuperior.dsmovie.dto.ScoreDTO;
-import com.devsuperior.dsmovie.services.ScoreService;
+import com.devsuperior.dsmovie.rest.dto.MovieDTO;
+import com.devsuperior.dsmovie.rest.dto.ScoreDTO;
+import com.devsuperior.dsmovie.model.services.ScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;

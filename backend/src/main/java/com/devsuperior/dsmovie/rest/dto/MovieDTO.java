@@ -1,6 +1,6 @@
-package com.devsuperior.dsmovie.dto;
+package com.devsuperior.dsmovie.rest.dto;
 
-import com.devsuperior.dsmovie.entities.Movie;
+import com.devsuperior.dsmovie.model.entities.Movie;
 
 public class MovieDTO {
 

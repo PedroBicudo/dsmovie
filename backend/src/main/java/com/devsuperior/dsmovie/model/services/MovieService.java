@@ -1,8 +1,8 @@
-package com.devsuperior.dsmovie.services;
+package com.devsuperior.dsmovie.model.services;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
-import com.devsuperior.dsmovie.entities.Movie;
-import com.devsuperior.dsmovie.repositories.MovieRepository;
+import com.devsuperior.dsmovie.rest.dto.MovieDTO;
+import com.devsuperior.dsmovie.model.entities.Movie;
+import com.devsuperior.dsmovie.model.repositories.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

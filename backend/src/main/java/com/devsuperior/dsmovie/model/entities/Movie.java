@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.entities;
+package com.devsuperior.dsmovie.model.entities;
 
 import javax.persistence.*;
 import java.util.HashSet;
