@@ -1,14 +1,14 @@
-package com.devsuperior.dsmovie.services;
+package com.devsuperior.dsmovie.model.services;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
-import com.devsuperior.dsmovie.dto.ScoreDTO;
-import com.devsuperior.dsmovie.entities.Movie;
-import com.devsuperior.dsmovie.entities.Score;
-import com.devsuperior.dsmovie.entities.ScorePK;
-import com.devsuperior.dsmovie.entities.User;
-import com.devsuperior.dsmovie.repositories.MovieRepository;
-import com.devsuperior.dsmovie.repositories.ScoreRepository;
-import com.devsuperior.dsmovie.repositories.UserRepository;
+import com.devsuperior.dsmovie.rest.dto.MovieDTO;
+import com.devsuperior.dsmovie.rest.dto.ScoreDTO;
+import com.devsuperior.dsmovie.model.entities.Movie;
+import com.devsuperior.dsmovie.model.entities.Score;
+import com.devsuperior.dsmovie.model.entities.ScorePK;
+import com.devsuperior.dsmovie.model.entities.User;
+import com.devsuperior.dsmovie.model.repositories.MovieRepository;
+import com.devsuperior.dsmovie.model.repositories.ScoreRepository;
+import com.devsuperior.dsmovie.model.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,7 +1,7 @@
-package com.devsuperior.dsmovie.controller;
+package com.devsuperior.dsmovie.rest.controller;
 
-import com.devsuperior.dsmovie.dto.MovieDTO;
-import com.devsuperior.dsmovie.services.MovieService;
+import com.devsuperior.dsmovie.rest.dto.MovieDTO;
+import com.devsuperior.dsmovie.model.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

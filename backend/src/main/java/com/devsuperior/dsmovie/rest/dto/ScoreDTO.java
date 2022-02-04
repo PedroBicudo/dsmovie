@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.dto;
+package com.devsuperior.dsmovie.rest.dto;
 
 public class ScoreDTO {
     private Long movieId;
