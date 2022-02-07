@@ -20,7 +20,7 @@ const Pagination: React.FC<Props> = ({ moviesPage, onChangePagination }) => {
                     disabled={moviesPage.first}
                     onClick={() => onChangePagination(moviesPage.number-1)}
                     >
-                        <ArrowWrapper rotate={false}>
+                        <ArrowWrapper rotateToRight>
                             <Flex gap={0} alignItems="center" justify="center">
                                 <Arrow />
                             </Flex>
@@ -33,7 +33,7 @@ const Pagination: React.FC<Props> = ({ moviesPage, onChangePagination }) => {
                     disabled={moviesPage.last} 
                     onClick={() => onChangePagination(moviesPage.number+1)}
                     >
-                        <ArrowWrapper rotate={true}>
+                        <ArrowWrapper rotateToRight={false}>
                             <Flex gap={0} alignItems="center" justify="center">
                                 <Arrow />
                             </Flex>

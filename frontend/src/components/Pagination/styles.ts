@@ -25,13 +25,13 @@ const PaginationButton = styled.button`
 `;
 
 interface ArrowWrapperProps {
-    rotate: boolean
+    rotateToRight: boolean
 }
 
 const ArrowWrapper = styled.div<ArrowWrapperProps>`
     svg {
         fill: var(--color-white);
-        transform: ${props => props.rotate? "rotate(180deg)": "rotate(0deg)"};
+        transform: ${props => !props.rotateToRight? "rotate(180deg)": "rotate(0deg)"};
     }
 `;
 
