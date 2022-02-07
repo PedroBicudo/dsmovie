@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Card = styled.div`
+const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 480px;
@@ -9,12 +9,12 @@ const Card = styled.div`
 
 `;
 
-const CardImage = styled.img`
+const Image = styled.img`
     border-radius: 8px 8px 0px 0px;
     width: 100%;
 `;
 
-const CardContent = styled.div`
+const CardContentContainer = styled.div`
     background-color: var(--color-background-10);
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ const CardContent = styled.div`
     border-right: 1px solid var(--color-border-color-0);
 `;
 
-const CardTitle = styled.h3`
+const Title = styled.h3`
     color: var(--color-text-color-2);
     text-align: center;
     font-size: var(--fs-lg);
@@ -88,7 +88,7 @@ const FormGroupSelect = styled.select`
 `;
 
 
-const CardButton = styled.button`
+const Button = styled.button`
     background-color: var(--color-background-20);
     border: none;
     font-size: var(--fs-base);
@@ -115,11 +115,11 @@ const CardButton = styled.button`
 
 
 export {
-    Card,
-    CardImage,
-    CardContent,
-    CardTitle,
-    CardButton,
+    CardContainer,
+    Image,
+    CardContentContainer,
+    Title,
+    Button,
     Form,
     FormGroup,
     FormGroupLabel,
