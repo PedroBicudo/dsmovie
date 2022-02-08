@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
+import { NotFound } from "components/NotFound";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Flex } from "styles/layouts/Flex";
@@ -19,9 +20,16 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
     useEffect(() => {
         axios.get(`${BASE_URL}/movies/${movieId}`)
             .then(response => {
-                setMovie(response.data as Movie);
-            });
-    }, [movieId]);
+                if (response.status === 200) {
+                    return response.data;
+                }
+
+            }).then(movie => {
+                setMovie(movie);
+            })
+            .catch(() => {});
+
+        }, [movieId]);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement> ) => {
         event.preventDefault();
@@ -47,6 +55,10 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
             navigate("/");
         })
 
+    }
+
+    if (!movie) {
+        return <NotFound title="Filme não encontrado" description="O filme informado foi apagado ou não existe."/>
     }
 
     return (

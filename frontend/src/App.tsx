@@ -7,6 +7,7 @@ import Listing from 'pages/Listing';
 import Form from 'pages/Form';
 import MainHeader from "components/MainHeader";
 import { Grid } from "styles";
+import NotFoundPage from "pages/NotFoundPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/form">
           <Route path=":movieId" element={<Form />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       </Grid>
     </BrowserRouter>
