@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
       --fs-base: 0.875rem; /* 14px */
       --fs-lg: 1rem; /* 16px */
       --fs-xlg: 1.5rem; /* 24px */
+      --fs-xxlg: 2.5rem; /* 40px */
 
 
       /* Colors */
