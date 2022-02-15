@@ -15,6 +15,8 @@ type Props = {
 const FormCard: React.FC<Props> = ({ movieId }) => {
 
     const navigate = useNavigate();
+    const [isLoading, setLoading] = useState(true);
+    const [isError, setError] = useState(false);
     const [movie, setMovie] = useState<Movie>();
 
     useEffect(() => {
@@ -27,7 +29,12 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
             }).then(movie => {
                 setMovie(movie);
             })
-            .catch(() => {});
+            .catch(() => {
+                setError(true);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
 
         }, [movieId]);
 
@@ -57,12 +64,17 @@ const FormCard: React.FC<Props> = ({ movieId }) => {
 
     }
 
-    if (!movie) {
-        return <NotFound title="Filme não encontrado" description="O filme informado foi apagado ou não existe."/>
-    }
-
     return (
-        <Card movie={movie} handleSubmitEvent={handleSubmit} />
+        <>
+            {isError && !isLoading &&
+                <NotFound title="Filme não encontrado" description="O filme informado foi apagado ou não existe."/>
+            }
+
+            {!isError && !isLoading &&
+                <Card movie={movie} handleSubmitEvent={handleSubmit} />
+            }
+
+        </>
     );
 };
 
