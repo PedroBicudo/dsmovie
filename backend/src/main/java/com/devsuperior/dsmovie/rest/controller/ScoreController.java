@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/scores")
 public class ScoreController {
@@ -17,7 +19,7 @@ public class ScoreController {
     private ScoreService service;
 
     @PutMapping
-    public MovieDTO saveScore(@RequestBody ScoreDTO scoreDTO) {
+    public MovieDTO saveScore(@RequestBody @Valid ScoreDTO scoreDTO) {
         MovieDTO movieDTO = service.saveScore(scoreDTO);
 
         return movieDTO;
