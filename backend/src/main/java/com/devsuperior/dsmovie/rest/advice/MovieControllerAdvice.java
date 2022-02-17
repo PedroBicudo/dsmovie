@@ -3,6 +3,7 @@ package com.devsuperior.dsmovie.rest.advice;
 import com.devsuperior.dsmovie.model.exceptions.MovieNotFoundException;
 import com.devsuperior.dsmovie.rest.APIError;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -38,5 +39,11 @@ public class MovieControllerAdvice {
                 .collect(Collectors.toList());
 
         return new APIError(errors);
+    }
+
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public APIError handleHttpMessageNotReadableException(HttpMessageNotReadableException e) {
+        return new APIError("Invalid argument type in body");
     }
 }
