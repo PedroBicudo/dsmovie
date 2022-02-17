@@ -1,12 +1,21 @@
 package com.devsuperior.dsmovie.model.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import javax.persistence.EmbeddedId;
-import javax.persistence.Column;
 
 @Entity
 @Table(name = "tb_score")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Score {
 
     @EmbeddedId
@@ -14,31 +23,4 @@ public class Score {
 
     @Column(name = "value")
     private Double score;
-
-    public Score() {
-    }
-
-    public void setMovie(Movie movie) {
-        this.id.setMovie(movie);
-    }
-
-    public void setUser(User user) {
-        this.id.setUser(user);
-    }
-
-    public ScorePK getId() {
-        return id;
-    }
-
-    public void setId(ScorePK id) {
-        this.id = id;
-    }
-
-    public Double getScore() {
-        return score;
-    }
-
-    public void setScore(Double score) {
-        this.score = score;
-    }
 }
