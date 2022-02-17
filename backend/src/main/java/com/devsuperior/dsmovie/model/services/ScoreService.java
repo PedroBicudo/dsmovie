@@ -1,5 +1,6 @@
 package com.devsuperior.dsmovie.model.services;
 
+import com.devsuperior.dsmovie.model.exceptions.MovieNotFoundException;
 import com.devsuperior.dsmovie.rest.dto.MovieDTO;
 import com.devsuperior.dsmovie.rest.dto.ScoreDTO;
 import com.devsuperior.dsmovie.model.entities.Movie;
@@ -117,7 +118,9 @@ public class ScoreService {
     }
 
     private Movie findMovieById(Long movieId) {
-        return movieRepository.findById(movieId).get();
+        return movieRepository
+                .findById(movieId)
+                .orElseThrow(() -> new MovieNotFoundException());
     }
 
 
