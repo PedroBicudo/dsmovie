@@ -2,7 +2,7 @@
 <p align="center">Aplicação de avaliação de filmes desenvolvida durante a Semana Spring React.</p>
 <p align="center">
   <a href="https://pedrobicudo-dsmovie.netlify.app/">Link do site</a><br>
-  <a href="https://pedrobicudo-dsmovie.herokuapp.com">Link da API</a>
+  <a href="https://pedrobicudo-dsmovie.herokuapp.com">Link da API</a><br>
   <a href="https://pedrobicudo-dsmovie.herokuapp.com/swagger-ui/">Documentação</a>
 </p>
 
