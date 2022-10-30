@@ -1,11 +1,5 @@
 <h1 align="center">:tv: <br/> DSmovie</h1>
 <p align="center">Aplicação de avaliação de filmes desenvolvida durante a Semana Spring React.</p>
-<p align="center">
-  <a href="https://pedrobicudo-dsmovie.netlify.app/">Link do site</a><br>
-  <a href="https://pedrobicudo-dsmovie.herokuapp.com">Link da API</a><br>
-  <a href="https://pedrobicudo-dsmovie.herokuapp.com/swagger-ui/">Documentação</a>
-</p>
-
 
 <div align="center">
   <h2>Desktop</h2>
@@ -57,7 +51,6 @@ npm run start
 - React Router DOM
 - Axios
 - Git & Github
-- Netlify
 - Typescript
 - styled-components
 
@@ -67,7 +60,6 @@ npm run start
 - Spring Data JPA
 - Spring Web
 - H2 Database
-- Heroku
 - PostgreSQL
 
 ## O que eu aprendi? 
